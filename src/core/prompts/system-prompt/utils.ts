@@ -23,7 +23,12 @@ export function isGPT5ModelFamily(id: string): boolean {
 }
 
 export function isNextGenModelFamily(id: string): boolean {
-	return isClaude4ModelFamily(id) || isGemini2dot5ModelFamily(id) || isGrok4ModelFamily(id) || isGPT5ModelFamily(id)
+	return isClaude4ModelFamily(id) || isGemini2dot5ModelFamily(id) || isGrok4ModelFamily(id) || isGPT5ModelFamily(id) || isGoodModelFamily(id)
+}
+
+export function isGoodModelFamily(id: string): boolean {
+	const modelId = id.toLowerCase()
+	return modelId.includes("deepseek") || modelId.includes("kimi-k2") || modelId.includes("qwen3") || modelId.includes("glm-4")
 }
 
 export function isLocalModelFamily(providerId: string): boolean {

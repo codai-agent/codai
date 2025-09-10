@@ -1,4 +1,11 @@
 # Changelog
+## [1.3.1]
+
+-   Fix UI language missing
+-   Add KIMI-k2 option
+-   Allow models such as Deepseek/Kimi-K2/GLM-4.5 to use focus task chains and context compact
+-   Fix openai compatible models choice
+
 ## [1.3.0]
 
 -   Fix token counting errors and infinite loops

@@ -57,7 +57,7 @@ const ErrorRow = memo(({ message, errorType, apiRequestFailedMessage, apiReqStre
 					// Default error display
 					return (
 						<p className="m-0 whitespace-pre-wrap text-[var(--vscode-errorForeground)] wrap-anywhere">
-							{clineErrorMessage}
+							{/* {clineErrorMessage}
 							{requestId && <div>Request ID: {requestId}</div>}
 							{clineErrorMessage?.toLowerCase()?.includes("powershell") && (
 								<>
@@ -71,12 +71,12 @@ const ErrorRow = memo(({ message, errorType, apiRequestFailedMessage, apiReqStre
 									</a>
 									.
 								</>
-							)}
-							{clineError?.isErrorType(ClineErrorType.Auth) && (
+							)} }
+							{ {clineError?.isErrorType(ClineErrorType.Auth) && (
 								<>
 									<br />
 									<br />
-									{/* The user is signed in or not using Codai provider */}
+									
 									{clineUser && !isClineProvider ? (
 										<span className="mb-4 text-[var(--vscode-descriptionForeground)]">
 											(Click "Retry" below)
@@ -87,7 +87,7 @@ const ErrorRow = memo(({ message, errorType, apiRequestFailedMessage, apiReqStre
 										</VSCodeButton>
 									)}
 								</>
-							)}
+							)} */}
 						</p>
 					)
 				}

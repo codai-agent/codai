@@ -19,6 +19,9 @@ export class FeatureFlagsService {
 	 */
 	public async isFeatureFlagEnabled(flagName: string): Promise<boolean> {
 		try {
+			if (flagName === 'focus_chain_checklist') {
+				return true
+			}
 			const flagEnabled = await this.getFeatureFlag(flagName)
 			return flagEnabled === true
 		} catch (error) {

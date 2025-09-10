@@ -51,7 +51,7 @@ const AutoApproveBar = ({ style }: AutoApproveBarProps) => {
 			return ACTION_METADATA.flatMap((a) => [a, a.subAction]).find((a) => a?.id === action)
 		})
 
-		const minusFavorites = enabledActions.filter((action) => !favorites.includes(action?.id ?? "") && action?.shortName)
+		const minusFavorites = enabledActions.filter((action) => !favorites.includes(action?.id ?? "") && t(action?.shortName ?? ""))
 
 		if (notificationsEnabled) {
 			minusFavorites.push(NOTIFICATIONS_SETTING)
@@ -66,7 +66,7 @@ const AutoApproveBar = ({ style }: AutoApproveBarProps) => {
 			) : null,
 			...minusFavorites.map((action, index) => (
 				<span className="text-[color:var(--vscode-foreground-muted)] opacity-60" key={action?.id}>
-					{action?.shortName}
+					{t(action?.shortName ?? "")}
 					{index < minusFavorites.length - 1 && ","}
 				</span>
 			)),
